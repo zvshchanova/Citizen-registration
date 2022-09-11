@@ -46,9 +46,10 @@ nav a:hover,
     float: none;
     display: block;
 }
+
 .show {
     display: block;
-  }
+}
 
 footer {
     height: 5rem;
@@ -57,22 +58,32 @@ footer {
     padding: 1rem;
 
 }
+
 main {
     height: max-content;
     background-color: lightseagreen;
     /* text-align: center; */
     padding: 1rem;
 }
+
 form {
     margin-top: 1rem;
     padding: 16px;
     background-color: lightgrey;
-    border: 1px solid grey;  
-    border-radius: 6px;    
-    width: min-content;   
-    justify-content: center;  
-    
-    }
-    input:invalid:required {
-        border: 1px solid red;
-    } 
+    border: 1px solid grey;
+    border-radius: 6px;
+    width: min-content;
+    justify-content: center;
+
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+  input:valid + span::after {
+    position: absolute;
+    content: "✓";
+    color: green;
+    padding-left: 1px;
+  }
